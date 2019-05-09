@@ -1,0 +1,14 @@
+{
+  "name": "graphql-node-tutorial",
+  "version": "0.0.1",
+  "description": "Application build following howtographql.com's GraphQL + Node back-end tutorial.",
+  "main": "index.js",
+  "repository": "git@github.com:dvnnorth/graphql-node-tutorial.git",
+  "author": "dvnnorth <13654540+dvnnorth@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "graphql-yoga": "^1.17.4"
+  }
+}
