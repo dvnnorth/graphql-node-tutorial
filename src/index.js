@@ -1,15 +1,13 @@
 const fs = require("fs");
 const { GraphQLServer } = require("graphql-yoga");
+const resolvers = require("./resolvers");
 
 // 1
+// Decided to define my schema in a .gql file. Trying this out (blocking)
 const typeDefs = fs.readFileSync(__dirname + "/schema.gql").toString();
 
-//2
-const resolvers = {
-  Query: {
-    info: () => "This is the API of a Hackernews Clone"
-  }
-};
+// 2
+// I decided to make it a separate module, see line 3
 
 // 3
 const server = new GraphQLServer({
