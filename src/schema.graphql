@@ -1,0 +1,22 @@
+# Implementing feed
+# First, add root field to Query type
+# Then, add needed data type Link
+# Last, go to your resolvers and add any necessary resolvers
+# Schema-Driven Development
+
+# Don't forget! You'll need to write resolvers for all of Link's fields as well!
+
+type Query {
+  info: String!
+  feed: [Link!]!
+}
+
+type Mutation {
+  post(url: String!, description: String!): Link!
+}
+
+type Link {
+  id: ID!
+  description: String!
+  url: String!
+}

@@ -1,10 +1,9 @@
-const fs = require("fs");
 const { GraphQLServer } = require("graphql-yoga");
 const resolvers = require("./resolvers");
 
 // 1
-// Decided to define my schema in a .gql file. Trying this out (blocking)
-const typeDefs = fs.readFileSync(__dirname + "/schema.gql").toString();
+// Turns out you don't need fs, Prisma handles it if you give the path
+const typeDefs = __dirname + "/schema.graphql";
 
 // 2
 // I decided to make it a separate module, see line 3
