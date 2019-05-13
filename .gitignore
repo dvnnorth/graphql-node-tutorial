@@ -1,5 +1,5 @@
 # Hide Prisma files
-prisma/
+prisma/prisma.yml
 src/generated
 
 # Logs
