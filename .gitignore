@@ -2,6 +2,9 @@
 prisma/prisma.yml
 src/generated
 
+# Hide utils file
+src/utils.js
+
 # Logs
 logs
 *.log

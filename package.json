@@ -8,8 +8,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "eslint": "^5.16.0",
     "graphql-yoga": "^1.17.4",
+    "jsonwebtoken": "^8.5.1",
     "prisma-client-lib": "^1.30.4"
   }
 }
