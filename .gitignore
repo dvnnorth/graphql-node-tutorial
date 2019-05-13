@@ -1,3 +1,7 @@
+# Hide Prisma files
+prisma/
+src/generated
+
 # Logs
 logs
 *.log
