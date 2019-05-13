@@ -30,7 +30,7 @@ type Link {
 type User {
   id: ID!
   name: String!
-  email: String! unique
+  email: String!
   links: [Link!]!
 }
 

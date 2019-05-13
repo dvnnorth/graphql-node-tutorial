@@ -2,11 +2,22 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Import APP_SECRET and getUserId
+const { APP_SECRET, getUserId } = require("../utils");
+
 module.exports = {
-  post: async (root, args, context) =>
-    await context.prisma.createLink({
-      ...args
-    }),
+  post: async (root, args, context) => {
+    const userId = getUserId(context);
+    return context.prisma.createLink({
+      url: args.url,
+      description: args.description,
+      postedBy: {
+        connect: {
+          id: userId
+        }
+      }
+    });
+  },
   updateLink: async (root, args, context) =>
     await context.prisma.updateLink({
       data: {
@@ -44,7 +55,7 @@ module.exports = {
   },
   login: async (root, args, context) => {
     // Get our user
-    const user = context.prisma.user({
+    const user = await context.prisma.user({
       email: args.email
     });
     // Error handling if there is no user found with email sent via args
