@@ -51,13 +51,18 @@ howtographql.com's tutorial:
 ```text
 The prisma deploy command starts an interactive process:
 
-First select the Demo server. When the browser opens, register with Prisma Cloud and go back to your terminal.
+First select the Demo server. When the browser opens, register with Prisma Cloud
+and go back to your terminal.
 
-Then you need to select the region for your Demo server. Once that’s done, you can just hit enter twice to use the suggested values for service and stage.
+Then you need to select the region for your Demo server. Once that’s done, you
+can just hit enter twice to use the suggested values for service and stage.
 
-Note: Prisma is open-source. You can deploy it with Docker to a cloud provider of your choice (such as Digital Ocean, AWS, Google Cloud, …).
+Note: Prisma is open-source. You can deploy it with Docker to a cloud provider
+of your choice (such as Digital Ocean, AWS, Google Cloud, …).
 
-Once the command has finished running, the CLI writes the endpoint for the Prisma API to your prisma.yml. It will look similar to this: https://eu1.prisma.sh/john-doe/hackernews-node/dev.
+Once the command has finished running, the CLI writes the endpoint for theu
+Prisma API to your prisma.yml. 
+It will look similar to this: https://eu1.prisma.sh/john-doe/hackernews-node/dev.
 ```
 
 Now run `prisma generate` and you're cooking with grease.

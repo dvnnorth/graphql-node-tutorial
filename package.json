@@ -9,6 +9,7 @@
   "private": false,
   "dependencies": {
     "eslint": "^5.16.0",
-    "graphql-yoga": "^1.17.4"
+    "graphql-yoga": "^1.17.4",
+    "prisma-client-lib": "^1.30.4"
   }
 }
