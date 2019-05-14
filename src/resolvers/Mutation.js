@@ -77,5 +77,21 @@ module.exports = {
       token,
       user
     };
+  },
+  vote: async (root, args, context) => {
+    const userId = getUserId(context);
+    const linkExists = await context.prisma.$exists.vote({
+      user: { id: userId },
+      link: { id: args.linkId }
+    });
+
+    if (linkExists) {
+      throw new Error(`Already voted for link ${args.linkId}`);
+    }
+
+    return context.prisma.createVote({
+      user: { connect: { id: userId } },
+      link: { connect: { id: args.linkId } }
+    });
   }
 };
